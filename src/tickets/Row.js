@@ -1,7 +1,11 @@
 import React from 'react'
 
-class TableRow extends React.Component{
+class TicketRow extends React.Component{
+
+    
+    
     render(){
+        
         return(
             <tr>
                 <td>{this.props.ticket.ticket_code}</td>
@@ -10,9 +14,10 @@ class TableRow extends React.Component{
                 <td>{this.props.ticket.priority}</td>
                 <td>{this.props.ticket.message}</td>
                 <td>{this.props.ticket.status}</td>
+                <td><button onClick = {this.props.handleRemove} value = {this.props.ticket.ticket_code}> x </button></td>
             </tr>
         )
     }
 }
 
-export default TableRow
+export default TicketRow
